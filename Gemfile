@@ -32,6 +32,15 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Bootstrap 4
+gem 'bootstrap', '~> 4.1.3'
+
+# Devise
+gem 'devise'
+
+# Simpleform
+gem 'simple_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
