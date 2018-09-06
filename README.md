@@ -1,5 +1,7 @@
 # README
 
+git remote add origin https://github.com/senai-challenge-grupo3/Restart.git
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
