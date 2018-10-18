@@ -7,6 +7,7 @@ class CreateSaves < ActiveRecord::Migration[5.0]
       t.integer :oficina_lv
       t.integer :fabrica_lv
       t.integer :vida
+      t.integer :score
       t.belongs_to :user, foreign_key: true
 
       t.timestamps

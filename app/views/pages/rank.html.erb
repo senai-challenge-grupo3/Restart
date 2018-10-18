@@ -12,31 +12,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1º</td>
-              <td>User</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>2º</td>
-              <td>User2</td>
-              <td>9</td>
-            </tr>
-            <tr>
-              <td>3º</td>
-              <td>User3</td>
-              <td>8</td>
-            <tr>
-              <td>4º</td>
-              <td>User4</td>
-              <td>7</td>
-            <tr>
-              <td>5º</td>
-              <td>User5</td>
-              <td>6</td>
-            </tr>
-            </tr>
-            </tr>
+            <% @cont = 0 %>
+            <% @tmp = 0 %>
+            <% @saves.each do |s| %>
+            <% if s.score != @tmp %>
+              <% @cont += 1 %>
+            <%end%>
+              <tr>
+                <td><%= @cont %>º</td>
+                <td><%= s.user.nome %></td>
+                <td><%= s.score %></td>
+              </tr>
+              <% @tmp = s.score %>
+            <% end %>
           </tbody>
         </table>
         <%= link_to "Voltar", home_path, class: "btn btn-outline-light btn-sm" %>

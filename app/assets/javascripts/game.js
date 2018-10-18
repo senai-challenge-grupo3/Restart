@@ -115,7 +115,7 @@ class Game {
 	}
 
 	pontuation(){
-		this.score = ((this.time * (this.colected + 1))) / ((1 + player.hp)/player.hpMax);
+		this.score = ((this.time * ((this.colected/50) + 1))) / ((1 + player.hp)/player.hpMax);
 	}
 
 	end(){

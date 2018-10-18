@@ -70,6 +70,6 @@ class SavesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def safe_params
-      params.permit(:felicidade, :recurso, :casa_lv, :oficina_lv, :fabrica_lv, :vida, :user_id)
+      params.permit(:felicidade, :recurso, :casa_lv, :oficina_lv, :fabrica_lv, :vida, :user_id, :score)
     end
 end
