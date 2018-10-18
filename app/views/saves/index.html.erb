@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Felicidade</th>
+      <th>Recurso</th>
+      <th>Casa lv</th>
+      <th>Oficina lv</th>
+      <th>Fabrica lv</th>
+      <th>Vida</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saves.each do |safe| %>
+      <tr>
+        <td><%= safe.felicidade %></td>
+        <td><%= safe.recurso %></td>
+        <td><%= safe.casa_lv %></td>
+        <td><%= safe.oficina_lv %></td>
+        <td><%= safe.fabrica_lv %></td>
+        <td><%= safe.vida %></td>
+        <td><%= safe.user %></td>
+        <td><%= link_to 'Show', safe %></td>
+        <td><%= link_to 'Edit', edit_safe_path(safe) %></td>
+        <td><%= link_to 'Destroy', safe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Safe', new_safe_path %>

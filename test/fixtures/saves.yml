@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  felicidade: 1
+  recurso: 1
+  casa_lv: 1
+  oficina_lv: 1
+  fabrica_lv: 1
+  vida: 
+  user: one
+
+two:
+  felicidade: 1
+  recurso: 1
+  casa_lv: 1
+  oficina_lv: 1
+  fabrica_lv: 1
+  vida: 
+  user: two

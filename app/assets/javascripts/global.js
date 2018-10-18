@@ -94,6 +94,13 @@ function updateListElement(elementList ,name){
 }
 
 function end(){
+  $.ajax({
+    url: "/saves.json",
+    method: "POST",
+    dataType: "JSON",
+    data: {recurso: game.colected, score: game.score}
+  });
+
   showEnd();
 }
 

@@ -1,0 +1,22 @@
+<nav class="container-fluid h4" style="position: absolute; z-index: 1">
+	<div class="row">
+		<%= link_to "Sair", root_path, class: "col-sm mr-3" %>
+
+		<%= link_to "Missão", game_path, class: "col-sm text-center" %>
+
+		<h4 class="col-sm text-center">Recursos</h4>
+
+		<a href="#" class="save col-sm text-right">Salvar</a>
+	</div>
+</nav>
+
+<div class="sidenav">
+  <h3 class="text-light ml-3">Upgrades</h3>
+  <a href="#">Casa</a>
+  <a href="#">Oficina</a>
+  <a href="#">Fabrica</a>
+</div>
+
+<script>
+	$(".container").addClass("no-container");
+</script>

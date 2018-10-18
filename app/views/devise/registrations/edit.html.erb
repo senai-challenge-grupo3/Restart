@@ -7,9 +7,7 @@
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :nome, required: true %>
     <%= f.input :login, required: true %>
-    <%= f.input :data_nascimento, required: true %>
-
-
+    <%= f.input :data_nascimento, required: true, label: "Data de Nascimento", start_year: Date.today.year - 150, end_year: Date.today.year, order: [:day, :month, :year], prompt: {day: "Dia", month: "Mês", year: "Ano"} %>
     <%= f.input :password, label: "Senha", hint: "não preencha caso não queira mudar sua senha", required: false %>
     <%= f.input :password_confirmation, label: "Confirmar a senha", required: false, input_html: { autocomplete: "new-password" } %>
     <%= f.input :current_password, label: "Senha atual", hint: "precisamos da sua senha atual para muda-la", required: true %>

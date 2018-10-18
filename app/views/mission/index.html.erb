@@ -13,6 +13,7 @@
 			<p>Sua nave sofreu danos graves, você terá que retornar para sua colônia.</p>
 			<p>Leve seus recursos consigo e melhore sua colonia e nave.</p>
 			<p class="result h2"></p>
+			<%= link_to "colonia", colony_path %>
 			<button href="#" class="btn btn-outline-dark">Colonia</button>
 		</div>
 	</div>
@@ -36,6 +37,13 @@
 </div>
 
 <script>
+	//variaveis da missão
+	let game;
+	let player;
+	let reward;
+	let asteroid;
+	let block = false;
+	
 	$(document).ready(function(){//Initializer
 	  init();
 	  inicio();
@@ -43,11 +51,5 @@
 	  $(".container").addClass("no-container");
 	});
 
-	//variaveis da missão
-	var game;
-	var player;
-	var reward;
-	var asteroid;
-	var block = false;
 
 </script>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :saves
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -13,4 +15,6 @@ Rails.application.routes.draw do
   get 'config', to: 'pages#config'
 
   get 'game', to: 'mission#index'
+  
+  get 'colony', to: 'colony#index'
 end
