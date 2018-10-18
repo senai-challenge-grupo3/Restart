@@ -90,3 +90,46 @@
   border-radius: 50%;
 }
 
+
+//game
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  position: relative;
+}
+
+#player {
+  position: absolute;
+  background-image: url("player.png");
+  background-size: cover;
+}
+
+.obstacle {
+  position: absolute;
+  background-image: url("asteroid.gif");
+  background-size: cover;
+}
+
+.reward {
+  position: absolute;
+  background-image: url("reward.png");
+  background-size: cover;
+}
+
+.score {
+  position: fixed;
+  color: #ffffff;
+  top: 0;
+}
+
+.no-container{
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}

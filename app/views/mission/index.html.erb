@@ -1,0 +1,53 @@
+<nav class="container-fluid text-light" style="position: absolute; z-index: 1">
+	<div class="row">
+		<div class="col-lg hp h3" >Vidas: </div>
+		<div class="col-lg score h3 text-center" >Score: </div>
+		<div class="col-lg pride h3 text-right" >Recurso: </div>
+	</div>
+</nav>
+
+<div class="container-fluid end mt-5" style="position: absolute; z-index: -1;">
+	<div class="card bg-white col-8 mx-auto pt-5">
+		<div class="card-head"><h1>Fim</h1></div>
+		<div class="card-body h4">
+			<p>Sua nave sofreu danos graves, você terá que retornar para sua colônia.</p>
+			<p>Leve seus recursos consigo e melhore sua colonia e nave.</p>
+			<p class="result h2"></p>
+			<button href="#" class="btn btn-outline-dark">Colonia</button>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid config" style="position: absolute; z-index: -1">
+	<div class="card bg-white col-8 mx-auto">
+		<div class="card-head"><h1>Config</h1></div>
+		<div class="card-body h4">
+			<p class="result h2">Result</p>
+			<div class="row">
+				<button class="btn btn-outline-dark" onclick="player.changeKeyboard();">Trocar controle</button>
+				<button class="btn btn-outline-dark" onclick="inicio();">Recomeçar missão</button>
+				<button class="btn btn-danger ml-auto" onclick="hideConfig();">X</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="game">
+</div>
+
+<script>
+	$(document).ready(function(){//Initializer
+	  init();
+	  inicio();
+	  $("body").css("overflow", "hidden");
+	  $(".container").addClass("no-container");
+	});
+
+	//variaveis da missão
+	var game;
+	var player;
+	var reward;
+	var asteroid;
+	var block = false;
+
+</script>

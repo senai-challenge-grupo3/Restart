@@ -12,5 +12,5 @@ Rails.application.routes.draw do
 
   get 'config', to: 'pages#config'
 
-  get 'game', to: 'pages#gamecolonia'
+  get 'game', to: 'mission#index'
 end
