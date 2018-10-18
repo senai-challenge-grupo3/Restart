@@ -1,7 +1,7 @@
 class Reward{
 	constructor (screenHeight, screenWidth) {
-		this.height = 50;
-		this.width = 50;
+		this.height = 25;
+		this.width = 25;
 		this.x = 0;
 		this.y = 0;
 		this.screenHeight = screenHeight;
