@@ -1,5 +1,5 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<h2 class="text-center devise">Usuário</h2>
+<div class="devise card-body">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
@@ -10,18 +10,18 @@
     <%= f.input :data_nascimento, required: true %>
 
 
-    <%= f.input :password, hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false, input_html: { autocomplete: "new-password" } %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :password, label: "Senha", hint: "não preencha caso não queira mudar sua senha", required: false %>
+    <%= f.input :password_confirmation, label: "Confirmar a senha", required: false, input_html: { autocomplete: "new-password" } %>
+    <%= f.input :current_password, label: "Senha atual", hint: "precisamos da sua senha atual para muda-la", required: true %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div class="form-actions text-center">
+    <%= f.button :submit, "Atualizar" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<%= link_to "Cancele sua conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete, class: "btn btn-outline-light btn-sm" %>
+<br>
+<%= link_to "Voltar", :back, class: "btn btn-outline-light btn-sm" %>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

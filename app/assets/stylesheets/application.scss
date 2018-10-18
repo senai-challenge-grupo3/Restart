@@ -16,3 +16,77 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+.devise{
+	/*margin-top: 13vh !important;*/
+  margin-right: 40vh;
+  margin-left: 40vh;
+	background-color: #00000099;
+	/*border-radius: 10px;*/
+	/*border: 3px solid #0a8bca;*/
+	color :#ffffff;
+}.card-header{
+	background-color: #010101;
+}.card-body{
+	background-color: #00000099;
+}.edit{
+  margin-top: 25vh !important;
+}.home{
+  margin-top: 13vh !important;
+  margin-right: 30vh;
+  margin-left: 30vh;
+  color:#ffffff;
+}body{
+  background-image: url("background.png");
+  background-size: cover;
+}.top{
+  margin-top: 5vh !important;
+  margin-right: 40vh;
+  margin-left: 40vh;
+  color:#ffffff;
+}.list-group {   
+  margin-left: -160px;
+  float: left;
+  padding-top: 35vh;
+}
+
+
+/* Botão Switch*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}.switch input {display:none;}
+.corredor {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}.corredor:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}input:checked + .corredor {
+  background-color: #2196F3;
+}input:checked + .corredor:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}.corredor.round {
+  border-radius: 34px;
+}.corredor.round:before {
+  border-radius: 50%;
+}
+
