@@ -26,7 +26,7 @@ class Save{
 	}
 
 	upgradeOficina(){
-		var resp = confirm("Oficina para o nivel: "+(this.oficinaLv++)+"\nValor: "+(2000*this.oficinaLv));
+		var resp = confirm("Oficina para o nivel: "+(this.oficinaLv+1)+"\nValor: "+(2000*this.oficinaLv));
 		if (this.oficinaLv <= 5) {
 			if(this.recurso >= 2000*this.oficinaLv){
 				if(this.fabricaLv > this.oficinaLv){
