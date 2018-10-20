@@ -37,11 +37,11 @@ gem 'simple_form'
 gem 'rails_admin', '~> 1.3'
 gem "rails_admin_import", "~> 2.1"
 
+gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 group :development do
 	# <% console %>
 	gem 'web-console', '>= 3.3.0'
 	# Use mysql as the database for Active Record
-	gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 end
 
 group :production do
