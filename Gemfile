@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -35,7 +33,6 @@ gem 'devise'
 # Simpleform
 gem 'simple_form'
 
-
 # Admin
 gem 'rails_admin', '~> 1.3'
 gem "rails_admin_import", "~> 2.1"
@@ -43,6 +40,12 @@ gem "rails_admin_import", "~> 2.1"
 group :development do
 	# <% console %>
 	gem 'web-console', '>= 3.3.0'
+	# Use mysql as the database for Active Record
+	gem 'mysql2', '>= 0.3.18', '< 0.6.0'
+end
+
+group :production do
+	gem "pg"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

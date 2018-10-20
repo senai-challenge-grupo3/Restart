@@ -2,7 +2,7 @@ class Player extends Keyboard{
   constructor (screenHeight, screenWidth) {
     super();
     this.hpMax = 5;
-    this.hp = 5;
+    this.hp = 3;
     this.height = 49;
     this.width = 49;
     this.y = screenHeight - this.height -200;//posição 'y' inicial

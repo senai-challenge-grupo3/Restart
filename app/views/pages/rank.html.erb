@@ -1,32 +1,32 @@
 <div class="home text-center">
-<%= image_tag("icongame") %>	
+  <%= image_tag("icongame") %>	
 </div>
 <div class="top">
-    <div class="table-responsive-sm card-body">
-      	<table class="table table-bordered">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Posição</th>
-              <th scope="col">Usuário</th>
-              <th scope="col">Pontuação</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @cont = 0 %>
-            <% @tmp = 0 %>
-            <% @saves.each do |s| %>
-            <% if s.score != @tmp %>
-              <% @cont += 1 %>
-            <%end%>
-              <tr>
-                <td><%= @cont %>º</td>
-                <td><%= s.user.nome %></td>
-                <td><%= s.score %></td>
-              </tr>
-              <% @tmp = s.score %>
-            <% end %>
-          </tbody>
-        </table>
-        <%= link_to "Voltar", home_path, class: "btn btn-outline-light btn-sm" %>
-     </div>
+  <div class="table-responsive-sm card-body">
+  	<table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Posição</th>
+          <th scope="col">Usuário</th>
+          <th scope="col">Pontuação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cont = 0 %>
+        <% @tmp = 0 %>
+        <% @saves.each do |s| %>
+        <% if s.score != @tmp %>
+          <% @cont += 1 %>
+        <%end%>
+          <tr>
+            <td><%= @cont %>º</td>
+            <td><%= s.user.nome %></td>
+            <td><%= s.score %></td>
+          </tr>
+          <% @tmp = s.score %>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to "Voltar", home_path, class: "btn btn-outline-light btn-sm" %>
+ </div>
 </div>

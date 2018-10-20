@@ -1,22 +1,52 @@
-<nav class="container-fluid h4" style="position: absolute; z-index: 1">
+<nav class="container-fluid h4 text-light" style="position: absolute; z-index: 1">
 	<div class="row">
-		<%= link_to "Sair", root_path, class: "col-sm mr-3" %>
+		<%= link_to "Sair", root_path, class: "col-sm mr-3 btn btn-danger btn-block" %>
 
-		<%= link_to "Missão", game_path, class: "col-sm text-center" %>
+		<a onclick="redirectMission();" class="col-sm text-center btn btn-dark btn-block">Missão</a>
 
-		<h4 class="col-sm text-center">Recursos</h4>
+		<h4 class="col-sm text-center rec text-light ">Recursos</h4>
 
-		<a href="#" class="save col-sm text-right">Salvar</a>
+		<a onclick="update.salvar();" class="save col-sm text-right btn btn-info btn-block">Salvar</a>
 	</div>
 </nav>
 
 <div class="sidenav">
   <h3 class="text-light ml-3">Upgrades</h3>
-  <a href="#">Casa</a>
-  <a href="#">Oficina</a>
-  <a href="#">Fabrica</a>
+  <!-- <a href="#">Casa</a> -->
+  <a onclick="update.upgradeOficina();">Oficina</a>
+  <a onclick="update.upgradefabrica();">Fabrica</a>
+</div>
+
+<div class="planet mx-5 mh-5 text-light">
+	<div class="card card-colony oficina bg-translucid">
+		<h3 class="card-header">Oficina</h3>
+		<div class="card-body">
+			<p class="h6">Quantidades de vidas da nave: <i id="vidaHtml"></i></p>
+			<div class="nave"></div>
+			<button onclick="update.aumentarVida();" class="btn btn-lg btn-block">Melhorar a nave</button>
+		</div>
+	</div>
+	<div class="card card-colony evento bg-translucid">
+		<h3 class="card-header">Eventos</h3>
+		<div class="card-body">
+			<p class="h6">Felicidade atual: <i id="felicidadeHtml"></i></p>
+			<button onclick="update.aumentarFelicidade();" class="btn btn-lg btn-block">Realizar evento</button>
+		</div>
+	</div>
 </div>
 
 <script>
 	$(".container").addClass("no-container");
+
+	let save = [];
+	save[0] = <%= @save.felicidade %>;
+	save[1] = <%= @save.recurso %>;
+	save[2] = <%= @save.casa_lv %>;
+	save[3] = <%= @save.oficina_lv %>;
+	save[4] = <%= @save.fabrica_lv %>;
+	save[5] = <%= @save.vida %>;
+	save[6] = <%= @save.id %>;
+	
+		let update = initColonia(save);
+
 </script>

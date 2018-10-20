@@ -8,8 +8,6 @@ Rails.application.routes.draw do
 
   get 'home', to: 'pages#home'
 
-  get 'help', to: 'pages#ajuda'
-
   get 'ranking', to: 'pages#rank'
 
   get 'config', to: 'pages#config'

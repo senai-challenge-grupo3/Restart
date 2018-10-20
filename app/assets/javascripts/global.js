@@ -8,17 +8,20 @@ function init() {//loop
   });
 }
 
-function inicio() {
-  $("#game").html("");
-  player = new Player($("#game").height(), $("#game").width());
-  game = new Game($("#game").height(), $("#game").width());
-  reward = new Reward($("#game").height(), $("#game").width());
-  asteroid = new Asteroid($("#game").height(), $("#game").width());
+function inicio(id,recursoTotal, vida) {
+  gameHtml = $("#gameWindow");
+  gameHtml.html("");
+  player = new Player(gameHtml.height(), gameHtml.width());
+  game = new Game(gameHtml.height(), gameHtml.width());
+  reward = new Reward(gameHtml.height(), gameHtml.width());
+  asteroid = new Asteroid(gameHtml.height(), gameHtml.width());
+  game.id = id;
+  game.recursoTotal = recursoTotal;
+  player.hp = vida;
 
   timerGame();
 
   showNav();
-
 
   generateElement(player, "player", "");
   updateElement(player, "player");
@@ -55,7 +58,7 @@ function loop(){
 
 function generateElement(element, name, classe){
   id = name;
-  gameHtml = $("#game");
+  gameHtml = $("#gameWindow");
   idHtml = $("#"+id);
 
   gameHtml.html(gameHtml.html() + "<div id="+id+"></div>");
@@ -65,7 +68,7 @@ function generateElement(element, name, classe){
 function generateListElements(elementList, name, classe){
   for(i = 0; i < elementList.length; i++){
     id = name + i;
-    gameHtml = $("#game");
+    gameHtml = $("#gameWindow");
     idHtml = $("#"+id);
 
     gameHtml.html(gameHtml.html() + "<div class="+classe+" id="+id+"></div>");
@@ -94,14 +97,18 @@ function updateListElement(elementList ,name){
 }
 
 function end(){
-  $.ajax({
-    url: "/saves.json",
-    method: "POST",
-    dataType: "JSON",
-    data: {recurso: game.colected, score: game.score}
-  });
+  ajaxUpdate(game.id);
 
   showEnd();
+}
+
+function ajaxUpdate(){
+  $.ajax({
+    url: "/saves/"+game.id+".json",
+    method: "PUT",
+    dataType: "JSON",
+    data: {save_id: game.id, recurso: (game.colected + game.recursoTotal), score: game.score}
+  });
 }
 
 function showEnd(){

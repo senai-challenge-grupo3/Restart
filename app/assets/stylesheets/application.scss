@@ -18,12 +18,9 @@
 @import "bootstrap";
 
 .devise{
-	/*margin-top: 13vh !important;*/
   margin-right: 40vh;
   margin-left: 40vh;
 	background-color: #00000099;
-	/*border-radius: 10px;*/
-	/*border: 3px solid #0a8bca;*/
 	color :#ffffff;
 }
 
@@ -41,8 +38,6 @@
 
 .home{
   padding-top: 13vh !important;
-  // margin-right: 30vw;
-  // margin-left: 30vw;
   color:#ffffff;
 }
 
@@ -112,7 +107,7 @@ body {
   padding: 0;
 }
 
-#game {
+#gameWindow {
   width: 100vw;
   height: 100vh;
   background-color: #000000;
@@ -172,4 +167,50 @@ body {
 .sidenav a:hover {
   color: #f1f1f1;
   background-color: #11111199;
+}
+
+//colony
+.planet{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 95vh;
+  width: 80vw;
+
+  .card-colony{
+    position: absolute;
+    height: 100%;
+    width: 45%;
+  }
+
+  .card-colony.oficina{
+    right: 0;
+    button{
+      right:0;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .card-colony.evento{
+    left: 0;
+    button{
+      right:0;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+.bg-translucid{
+  background-color: #11111199;
+}
+
+.nave{
+  position: absolute;
+  background-image: url("player.png");
+  background-size: cover;
+  height: 98px;
+  width: 98px;
+  left: calc(50% - 49px);
 }

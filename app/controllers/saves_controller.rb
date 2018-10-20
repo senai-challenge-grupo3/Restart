@@ -4,21 +4,34 @@ class SavesController < ApplicationController
   # GET /saves
   # GET /saves.json
   def index
+    unless current_user.admin
+      redirect_to root_path
+    end
+
     @saves = Save.all
   end
 
   # GET /saves/1
   # GET /saves/1.json
   def show
+    unless current_user.admin
+      redirect_to root_path
+    end
   end
 
   # GET /saves/new
   def new
+    unless current_user.admin
+      redirect_to root_path
+    end
     @safe = Save.new
   end
 
   # GET /saves/1/edit
   def edit
+    unless current_user.admin
+      redirect_to root_path
+    end
   end
 
   # POST /saves

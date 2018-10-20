@@ -13,8 +13,7 @@
 			<p>Sua nave sofreu danos graves, você terá que retornar para sua colônia.</p>
 			<p>Leve seus recursos consigo e melhore sua colonia e nave.</p>
 			<p class="result h2"></p>
-			<%= link_to "colonia", colony_path %>
-			<button href="#" class="btn btn-outline-dark">Colonia</button>
+			<a onclick="redirectColony();" class="btn btn-outline-dark text-light">colonia</a>
 		</div>
 	</div>
 </div>
@@ -33,7 +32,7 @@
 	</div>
 </div>
 
-<div id="game">
+<div id="gameWindow">
 </div>
 
 <script>
@@ -46,7 +45,7 @@
 	
 	$(document).ready(function(){//Initializer
 	  init();
-	  inicio();
+	  inicio(<%= current_user.id %>, <%= @save.recurso %>, <%= @save.vida %>);
 	  $("body").css("overflow", "hidden");
 	  $(".container").addClass("no-container");
 	});

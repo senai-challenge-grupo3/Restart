@@ -10,6 +10,8 @@ class Game {
 		this.score = 0;
 		this.time = 0;
 		this.colected = 0;
+		this.id = 0;
+		this.recursoTotal = 0;
 	}
 
 	start() {

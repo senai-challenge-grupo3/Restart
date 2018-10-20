@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function redirectMission(){
+	window.location = "/game"
+}
+
+function redirectColony(){
+	window.location = "/colony"
+}
