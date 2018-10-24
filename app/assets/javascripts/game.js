@@ -7,6 +7,7 @@ class Game {
 		this.numRewards = 3;
 		this.obstacles = [];
 		this.rewards = [];
+		this.scoreAtual = 0;
 		this.score = 0;
 		this.time = 0;
 		this.colected = 0;

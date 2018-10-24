@@ -8,7 +8,7 @@ function init() {//loop
   });
 }
 
-function inicio(id,recursoTotal, vida) {
+function inicio(id,recursoTotal, vida, scoreAtual) {
   gameHtml = $("#gameWindow");
   gameHtml.html("");
   player = new Player(gameHtml.height(), gameHtml.width());
@@ -17,6 +17,7 @@ function inicio(id,recursoTotal, vida) {
   asteroid = new Asteroid(gameHtml.height(), gameHtml.width());
   game.id = id;
   game.recursoTotal = recursoTotal;
+  game.scoreAtual = scoreAtual;
   player.hp = vida;
 
   timerGame();
@@ -97,9 +98,12 @@ function updateListElement(elementList ,name){
 }
 
 function end(){
+  showEnd();
+  if(game.score <= game.scoreAtual){
+    game.score = game.scoreAtual;
+  }
   ajaxUpdate(game.id);
 
-  showEnd();
 }
 
 function ajaxUpdate(){

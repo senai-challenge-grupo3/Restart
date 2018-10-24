@@ -45,7 +45,7 @@
 	
 	$(document).ready(function(){//Initializer
 	  init();
-	  inicio(<%= current_user.id %>, <%= @save.recurso %>, <%= @save.vida %>);
+	  inicio(<%= current_user.id %>, <%= @save.recurso %>, <%= @save.vida %>, <%= @save.score %>);
 	  $("body").css("overflow", "hidden");
 	  $(".container").addClass("no-container");
 	});
